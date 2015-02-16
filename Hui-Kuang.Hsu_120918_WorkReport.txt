@@ -1,0 +1,62 @@
+[Info]
+  Hui-Kuang Hsu  
+  2012/09/18
+  Weekly Work Report
+
+ 
+[Work Item]
+     
+  1. [ITS#21578]The system will hang at "20" and show black screen when recover Bios from USB Flash Drive via power button
+     <Status>
+       Revisions after Tag 05.02.31 have this sympton
+       Older revision(e.g. Tag 05.02.29) do recovery with newer revision (e.g. Tag 05.02.34) as recovery capsule would success
+       Newer revision(e.g. Tag 05.02.34) do recovery with older revision (e.g. Tag 05.02.29) as recovery capsule would FAIL 
+
+  2. FitInfo to allow user define new tables   
+    <Staus>
+      Finished
+    <Issue Info>
+      Tag#:05.02.36
+      Issue#: IB07300113
+      Severity: Serious
+      Category: Build
+      Symptom: 1. (New Feature)
+               2. (New Feature)
+               3. Value of FIT pointer is incorrect
+      RootCause: 1. (New Feature)
+                 2. (New Feature)
+                 3. Assign incorrect value
+      Description: 1. Support to Gen Firmware Interface Table Type 0 ~ Type 0x70
+                   2. Reform INI file for FitInfo.exe
+                   2a. Rename define item PATCH_OFFSET to FIT_ADDRESS
+                   2b. Allow adding table by defining table info under [Table], [Table.ModuleName] 
+                   3. (Bug Fix)
+      Solution: 1. (New Feature) 
+                2. (New Feature) 
+                3. Assign correct value
+      SolutionDependency: IB07300113 enhance IB07300108 to support new ini file format
+      Reviewer: IB07010000
+ 
+      Duration: 2012/9/4~2012/9/17  
+
+  3 [ITS#21518] Memory size wrong on legacy Windows 32bit OS 	  
+     <Status>
+       Duplicating
+   
+  4. FIXED_DATA_ADDRESS support for INF file     
+     <Status>
+       trace code 
+   
+[Queued Task]
+  Driver binary files can not be overridden by the "SOURCE_OVERRIDE_PATH" description 
+  The result of GenFvImage calcuate size doesn't included free pad size 
+  Available Physical memory size is 916MB when attached 4GB RAM under Windows 32 bit OS. 
+
+
+
+
+
+
+
+
+  
